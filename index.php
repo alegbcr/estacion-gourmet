@@ -268,7 +268,7 @@
               <img class="picture--item " src="./images/talk_to_us/contact.svg"  alt="">
             </picture>
             <div class="mt-5 mb-5 px-5 col-12 col-md-6 col-lg-5 ">
-              <form action="/send-email" method="POST" class="mt-5">
+              <form action="index.php" method="POST" class="mt-5">
                 <div class="mb-3 mt-3">
                   <label for="name" class="form-label">Nombre Completo</label>
                   <input type="name" name="name" class="form-control" id="name" aria-describedby="emailHelp" autofocus placeholder="Ingresa tu nombre">
