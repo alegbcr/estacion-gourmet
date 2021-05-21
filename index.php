@@ -141,21 +141,8 @@
                   </div>
                   <div class="col-9 col-md-8">
                     <div class="card-body pt-1">
-                      <h5 class="card-title">Eventos Sociales</h5>
-                      <p class="card-text">Bautizos, cumpleaños, aniversarios, bodas, primera comunión, compromisos, parrilladas.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card col-12 mb-3 mt-3 " >
-                <div class="row g-0">
-                  <div class="col-3 col-md-4">
-                    <img src="./images/services/corporation_event.jpg" class="card-img-top" alt="...">
-                  </div>
-                  <div class="col-9 col-md-8">
-                    <div class="card-body pt-1">
-                      <h5 class="card-title">Eventos Corporativos</h5>
-                      <p class="card-text">Eventos para empresas.</p>
+                      <h5 class="card-title">Eventos Sociales y Corporativos</h5>
+                      <p class="card-text">Bautizos, cumpleaños, aniversarios, bodas, primera comunión, compromisos, parrilladas y eventos para empresas.</p>
                     </div>
                   </div>
                 </div>
@@ -209,7 +196,6 @@
                     <div class="card-body pt-1">
                       <h5 class="card-title">Pastelería</h5>
                       <p class="card-text">Pastelería artesanal con recetas originales.</p>
-                      <p class="card-text">Mi pasión realmente es la pastelería.</p>
                     </div>
                   </div>
                 </div>
@@ -317,7 +303,7 @@
                   <textarea name="massage" class="form-control" rows="4" placeholder="Qué deberíamos saber"></textarea>
                 </div>
                 
-                <button class="btn btn-primary mt-4">Envia la cotización</button>
+                <button type="submit" class="btn btn-primary mt-4">Envia la cotización</button>
               </form>
             </div>
           </div>
