@@ -1,3 +1,23 @@
+<?php
+if( isset($_POST["name"]) && isset($_POST["phone"]) && isset($_POST["email"]) )
+{
+  $mensajeEntero = ( 
+
+    'Información de la cotización' . "\r\n" . "\r\n" .
+    'Nombre: ' . $_POST["name"] . "\r\n" .
+    'Teléfono: ' . $_POST["phone"] . "\r\n" .
+    'Email de contacto: ' . $_POST["email"] . "\r\n" .
+    'Número de personas: ' . $_POST["numberPeople"] . "\r\n" .
+    'Lugar: ' . $_POST["place"] . "\r\n" .
+    'Fecha: ' . $_POST["date"] . "\r\n" .
+    'Requerimiento especial: ' . $_POST["message"]);
+	
+  mail("pruebas@estaciongourmet.net", "Nueva cotización de ".$_POST["name"] , $mensajeEntero);
+}
+?>
+
+
+
 <!doctype html>
 <html lang="es">
   <head>
@@ -300,7 +320,7 @@
                 </div>
                 <div class="mb-3 mt-3">
                   <label for="message" class="form-label">Requerimiento especial</label>
-                  <textarea name="massage" class="form-control" rows="4" placeholder="Qué deberíamos saber"></textarea>
+                  <textarea name="message" class="form-control" rows="4" placeholder="Qué deberíamos saber"></textarea>
                 </div>
                 
                 <button type="submit" class="btn btn-primary mt-4">Envia la cotización</button>
