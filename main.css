@@ -8,6 +8,8 @@
   --gold-color: rgb(242, 221, 114);
   --yellow-color: #fbcc34;
   --green-color: rgb(18, 140, 45);
+  --menta-color: #53b294;
+  --brown-color: #aa7265;
 
   /* FONTS */
 
@@ -77,6 +79,19 @@ main {
   width: 100vw;
 }
 
+.chat {
+  height: 60px;
+  width: 60px;
+  bottom: 40px;
+  right: 30px;
+  position: fixed;
+  z-index: 10;
+}
+
+.chat a img {
+  width: 100%;
+}
+
 /* Home */
 #carousel {
   position: relative;
@@ -101,6 +116,8 @@ main {
 }
 
 .overlay h1 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   text-transform: uppercase;
   background-color: rgba(141, 18, 51, 0.7);
 }
@@ -128,12 +145,16 @@ main {
 }
 
 .about_us h2 {
-  color: var(--red-color);
+  color: var(--menta-color);
+}
+
+.about_us p {
+  font-size: 1.5rem;
 }
 
 /* our services */
 .our_services h2 {
-  color: var(--red-color);
+  color: var(--brown-color);
 }
 
 .our_services .card {
@@ -146,7 +167,7 @@ main {
 }
 
 .our_services .card p {
-  font-size: 1.2rem;
+  font-size: 1.4rem !important;
 }
 
 .our_services img {
@@ -215,6 +236,11 @@ footer .container {
 footer ul {
   list-style: none;
   font-size: 1.3rem;
+}
+
+footer ul a {
+  text-decoration: none;
+  color: var(--white-color);
 }
 
 footer .profile {

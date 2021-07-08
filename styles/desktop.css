@@ -79,5 +79,6 @@ footer .container p {
 }
 
 footer .container li {
-  display: inline-block;
+  padding-top: 0.5rem;
+  display: block;
 }

@@ -12,7 +12,7 @@ if( isset($_POST["name"]) && isset($_POST["phone"]) && isset($_POST["email"]) )
     'Fecha: ' . $_POST["date"] . "\r\n" .
     'Requerimiento especial: ' . $_POST["message"]);
 	
-  mail("pruebas@estaciongourmet.net", "Nueva cotización de ".$_POST["name"] , $mensajeEntero);
+  mail("andrea.duran@estaciongourmet.net", "Nueva cotización de ".$_POST["name"] , $mensajeEntero);
 }
 ?>
 
@@ -41,6 +41,24 @@ if( isset($_POST["name"]) && isset($_POST["phone"]) && isset($_POST["email"]) )
     <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="./styles/desktop.css" media="screen and (min-width: 1024px)">
 
+
+    <!-- PIXEL DE FACEBOOK -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '2994866694062679');
+      fbq('track', 'PageView');
+      </script>
+      <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2994866694062679&ev=PageView&noscript=1"
+      /></noscript>
+      <!-- End Facebook Pixel Code -->
   </head>
 
   <body>
@@ -90,6 +108,11 @@ if( isset($_POST["name"]) && isset($_POST["phone"]) && isset($_POST["email"]) )
     <!-- /HEADER -->
 
     <!-- MAIN -->
+    <div class="chat">
+      <picture>
+        <a href="https://api.whatsapp.com/send?phone=+50684881111"><img src="./images/whatsapp.png" alt=""></a>
+      </picture>
+    </div>
     <main class="main" id="main">
       <!-- Home -->
       <section id="carousel" class="carousel slide carousel-fade main" data-bs-ride="carousel" data-pause="false">
@@ -98,10 +121,10 @@ if( isset($_POST["name"]) && isset($_POST["phone"]) && isset($_POST["email"]) )
             <img src="./images/home/atun.jpg" class="d-block w-100" alt="patillos de atun">
           </picture>
           <picture class="carousel-item" data-bs-interval="1500">
-            <img src="./images/home/cookies.jpg" class="d-block w-100" alt="deliciosas galletas con dulce de leche">
+            <img src="./images/home/queque.jpg" class="d-block w-100" alt="queque con almendras">
           </picture>
           <picture class="carousel-item" data-bs-interval="1500">
-            <img src="./images/home/mousse.jpg" class="d-block w-100" alt="imagen de porcion de mousse">
+            <img src="./images/home/sushi.jpg" class="d-block w-100" alt="sushi">
           </picture>
           <picture class="carousel-item" data-bs-interval="1500">
             <img src="./images/home/products.jpg" class="d-block w-100" alt="muestra de productos en la mesa">
@@ -109,7 +132,7 @@ if( isset($_POST["name"]) && isset($_POST["phone"]) && isset($_POST["email"]) )
         </div>
         <div class="overlay">
           <div class="col-12 col-md-12 title">
-            <h1 class="text-center">Somos el mejor aliado para tus eventos</h1>
+            <h1 class="text-center">Somos amantes de la buena cuchara</h1>
           </div>
         </div>
       </section>
@@ -118,12 +141,12 @@ if( isset($_POST["name"]) && isset($_POST["phone"]) && isset($_POST["email"]) )
       <section class="about_us" id="about_us">
         <div class="container">
           <div class="row align-items-center">
-            <h2 class="mb-3 mt-5 text-center">Sobre nosotros</h2>
+            <h2 class="mb-3 mt-5 text-center">Nuestra Chef</h2>
             <div class="col-12 col-md-6 col-lg-5 offset-lg-1 mt-3 mb-3">
               <p class="px-3 mb-5">Andrea Durán , es la chef y propietaria de Estación Gourmet creó la empresa en el 2006, amante de la buena cuchara, apasionada por su trabajo el cual disfruta de principio a fin.</p>
-              <p class="px-3 mb-5">Estación Gourmet nace de la creatividad de Andrea quien transmite todo su amor a través de cada platillo.</p>
-              <p class="px-3 mb-5">Les ofrecemos todos los servicios para su evento. Tenemos experiencia en eventos corporativos, clases de cocina, eventos privados en su casa, bodas, fiestas temáticas, etc.</p>
               <p class="px-3 mb-5">Todos nuestros productos son elaborados con los mejores ingredientes y dedicación para entregarle a nuestros clientes el mejor resultado en su mesa.</p>
+              <p class="px-3 mb-5">Día a día estamos en la vanguardia para crear las mejores recetas.</p>
+              <p class="px-3 mb-5">Les ofrecemos todos los servicios para su evento, nuestra experiencia en eventos corporativos, sociales, bodas, clases de cocina hacen que seamos su mejor opción.</p>
             </div>
             <picture class="col-12 col-md-6 about_us--picture d-flex justify-content-center my-3 px-0">
               <img class="picture--item" src="./images/about_us/adrea.jpg" alt="">
@@ -140,24 +163,23 @@ if( isset($_POST["name"]) && isset($_POST["phone"]) && isset($_POST["email"]) )
         <div class="container mb-5">
           <div class="card-group mb-5">
             <div class="row d-flex justify-content-center">
-              <div class="card col-12 mb-3 mt-3" >
+              <div class="card col-12 mb-3 mt-3">
                 <div class="row g-0">
-                  <div class="col-3 col-md-4">
-                    <img src="./images/services/menu_semanal.jpg" class="card-img-top" alt="...">
+                  <div class="col-3 col-md-4" style="height: 17rem;">
+                    <img src="./images/services/menu_semanal.jpg" class="card-img-top" alt="diferentes platos de comida">
                   </div>
                   <div class="col-9 col-md-8">
                     <div class="card-body pt-1">
                       <h5 class="card-title">Menú Semanal</h5>
                       <p class="card-text">Comida casera para toda la familia, sabores y productos naturales, entregados en la puerta de su casa.</p>
-                      <p class="card-text">El menú cambia todas las semanas para beneficio de todos.</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="card col-12 mb-3 mt-3" >
+              <div class="card col-12 mb-3 mt-3">
                 <div class="row g-0">
-                  <div class="col-3 col-md-4">
-                    <img src="./images/services/social_event.jpg" class="card-img-top" alt="...">
+                  <div class="col-3 col-md-4" style="height: 17rem;">
+                    <img src="./images/services/social_event.jpg" class="card-img-top" alt="chef sirviendo platillos">
                   </div>
                   <div class="col-9 col-md-8">
                     <div class="card-body pt-1">
@@ -169,8 +191,8 @@ if( isset($_POST["name"]) && isset($_POST["phone"]) && isset($_POST["email"]) )
               </div>
               <div class="card col-12 mb-3 mt-3 " >
                 <div class="row g-0">
-                  <div class="col-3 col-md-4">
-                    <img src="./images/services/classes.jpg" class="card-img-top" alt="...">
+                  <div class="col-3 col-md-4" style="height: 17rem;">
+                    <img src="./images/services/classes.jpg" class="card-img-top" alt="chef enseñando a colaboradora del hogar">
                   </div>
                   <div class="col-9 col-md-8">
                     <div class="card-body pt-1">
@@ -182,35 +204,36 @@ if( isset($_POST["name"]) && isset($_POST["phone"]) && isset($_POST["email"]) )
               </div>
               <div class="card col-12 mb-3 mt-3 " >
                 <div class="row g-0">
-                  <div class="col-3 col-md-4">
-                    <img src="./images/services/cookie_boxes.jpg" class="card-img-top" alt="...">
+                  <div class="col-3 col-md-4" style="height: 17rem;">
+                    <img src="./images/services/cookie_boxes.jpg" class="card-img-top" alt="caja de galletas">
                   </div>
                   <div class="col-9 col-md-8">
                     <div class="card-body pt-1">
                       <h5 class="card-title">Cookie boxes</h5>
                       <p class="card-text">Mensajes dulces y especiales.</p>
+                      <p class="card-text">Crea tu mensaje secreto para una persona especial.</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="card col-12 mb-3 mt-3 " >
+              <div class="card col-12 mb-3 mt-3">
                 <div class="row g-0">
-                  <div class="col-3 col-md-4">
-                    <img src="./images/services/corporation_boxes.jpg" class="card-img-top" alt="...">
+                  <div class="col-3 col-md-4" style="height: 17rem;">
+                    <img src="./images/services/corporation_boxes.jpg" class="card-img-top" alt="caja corporativa">
                   </div>
                   <div class="col-9 col-md-8">
                     <div class="card-body pt-1">
-                      <h5 class="card-title">Cajas corporativos</h5>
+                      <h5 class="card-title">Cajas corporativas</h5>
                       <p class="card-text">Cajas para reuniones virtuales o presenciales.</p>
                       <p class="card-text">Desayunos, refrigerios, almuerzos o cenas.</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="card col-12 mb-3  mt-3" >
+              <div class="card col-12 mb-3 mt-3">
                 <div class="row g-0">
-                  <div class="col-3 col-md-4">
-                    <img src="./images/services/bakery.jpg" class="card-img-top" alt="...">
+                  <div class="col-3 col-md-4" style="height: 17rem;">
+                    <img src="./images/services/bakery.jpg" class="card-img-top" alt="queque de chocolate">
                   </div>
                   <div class="col-9 col-md-8">
                     <div class="card-body pt-1">
@@ -220,63 +243,6 @@ if( isset($_POST["name"]) && isset($_POST["phone"]) && isset($_POST["email"]) )
                   </div>
                 </div>
               </div>
-
-
-
-              <!-- <div class="card col-6 col-lg-3 mt-1 px-2 align-items-center ">
-                <img src="../images/services/social_event.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Menú Semanal</h5>
-                  <p class="card-text text-center">Comida casera para toda la familia, sabores y productos naturales, entregados en la puerta de su casa.</p>
-                  <p class="card-text text-center">El menú cambia todas las semanas para beneficio de todos.</p>
-                </div>
-              </div> -->
-              <!-- <div class="card col-6 col-lg-3 mt-1 px-2 align-items-center">
-                <img src="../images/services/social_event.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Eventos Sociales</h5>
-                  <p class="card-text text-center">Bautizos, cumpleaños, aniversarios, bodas, primera comunión, compromisos, parrilladas.</p>
-                </div> -->
-              <!-- </div>
-              <div class="card col-6 col-lg-3 mt-2 px-2 align-items-center">
-                <img src="../images/services/corporation_event.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Eventos Corporativos</h5>
-                  <p class="card-text text-center">Eventos para empresas.</p>
-                </div>
-              </div> -->
-              <!-- <div class="card col-6 col-lg-3 mt-2 px-2 align-items-center">
-                <img src="../images/services/classes.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Clases de Cocina</h5>
-                  <p class="card-text text-center">Clases de cocina basados en la necesidad y gusto de cada familia.</p>
-                </div>
-              </div> -->
-              <!-- <div class="card col-6 col-lg-4 mt-2 px-2 align-items-center">
-                <img src="../images/services/cookie_boxes.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Cookie boxes</h5>
-                  <p class="card-text text-center">Mensajes dulces y especiales.</p>
-                </div>
-              </div> -->
-              <!-- <div class="card col-6 col-lg-4 mt-2 px-2 align-items-center">
-                <img src="../images/services/corporation_boxes.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Cajas corporativos</h5>
-                  <p class="card-text text-center">Cajas para reuniones virtuales o presenciales.</p>
-                  <p class="card-text text-center">Desayunos, refrigerios, almuerzos o cenas.</p>
-                </div>
-              </div> -->
-              <!-- <div class="card col-6 col-lg-4 mt-2 px-2 align-items-center">
-                <img src="../images/services/bakery.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Pastelería</h5>
-                  <p class="card-text text-center">Pastelería artesanal con recetas originales.</p>
-                  <p class="card-text text-center">Mi pasión realmente es la pastelería.</p>
-                </div>
-            </div>
-          </div>
-        </div> -->
       </section>
 
       <!-- Talk with us -->
@@ -322,8 +288,9 @@ if( isset($_POST["name"]) && isset($_POST["phone"]) && isset($_POST["email"]) )
                   <label for="message" class="form-label">Requerimiento especial</label>
                   <textarea name="message" class="form-control" rows="4" placeholder="Qué deberíamos saber"></textarea>
                 </div>
-                
-                <button type="submit" class="btn btn-primary mt-4">Envia la cotización</button>
+                <div class="d-grid gap-2">
+                  <button type="submit" class="btn btn-success mt-4">Envia la cotización</button>
+                </div>
               </form>
             </div>
           </div>
@@ -337,28 +304,40 @@ if( isset($_POST["name"]) && isset($_POST["phone"]) && isset($_POST["email"]) )
           <div class="card-group">
             <div class="row col-sm-12 col-lg-10 offset-lg-1">
               <div class="card item-picture col-6 col-lg-3" >
-                <img src="./images/gallery/2.jpg" class="d-block w-100" alt="...">
+                <img src="./images/gallery/2.jpg" class="d-block w-100" alt="cookie box">
               </div>
               <div class="card item-picture col-6 col-lg-3" >
-                <img src="./images/gallery/3.jpg" class="d-block w-100" alt="...">
+                <img src="./images/gallery/3.jpg" class="d-block w-100" alt="copitas de mousse">
               </div>
               <div class="card item-picture col-6 col-lg-3" >
-                <img src="./images/gallery/4.jpg" class="d-block w-100" alt="...">
+                <img src="./images/gallery/12.jpg" class="d-block w-100" alt="queque de chocolate con tarta chilena ecima">
               </div>
               <div class="card item-picture col-6 col-lg-3" >
-                <img src="./images/gallery/5.jpg" class="d-block w-100" alt="...">
+                <img src="./images/gallery/5.jpg" class="d-block w-100" alt="mesa servida en evento social">
               </div>
               <div class="card item-picture col-6 col-lg-3" >
-                <img src="./images/gallery/6.jpg" class="d-block w-100" alt="...">
+                <img src="./images/gallery/11.jpg" class="d-block w-100" alt="queque adornado">
               </div>
               <div class="card item-picture col-6 col-lg-3" >
-                <img src="./images/gallery/7.jpg" class="d-block w-100" alt="...">
+                <img src="./images/gallery/7.jpg" class="d-block w-100" alt="cajas corporativas">
               </div>
               <div class="card item-picture col-6 col-lg-3" >
-                <img src="./images/gallery/8.jpg" class="d-block w-100" alt="...">
+                <img src="./images/gallery/10.jpg" class="d-block w-100" alt="pie con frutas encima">
               </div>
               <div class="card item-picture col-6 col-lg-3" >
-                <img src="./images/gallery/9.jpg" class="d-block w-100" alt="...">
+                <img src="./images/gallery/9.jpg" class="d-block w-100" alt="mesa servida en evento corporativo">
+              </div>
+              <div class="card item-picture col-6 col-lg-3" >
+                <img src="./images/gallery/6.jpg" class="d-block w-100" alt="mesa de desayuno para evento">
+              </div>
+              <div class="card item-picture col-6 col-lg-3" >
+                <img src="./images/gallery/13.jpg" class="d-block w-100" alt="pie con clue berry">
+              </div>
+              <div class="card item-picture col-6 col-lg-3" >
+                <img src="./images/gallery/4.jpg" class="d-block w-100" alt="mesa arreglada para servir catering">
+              </div>
+              <div class="card item-picture col-6 col-lg-3" >
+                <img src="./images/gallery/8.jpg" class="d-block w-100" alt="mesa servida en evento social">
               </div>
             </div>
           </div>
@@ -368,30 +347,33 @@ if( isset($_POST["name"]) && isset($_POST["phone"]) && isset($_POST["email"]) )
     </main>
     <!-- /MAIN -->
 
+    
 
     <!-- FOOTER -->
     <footer id="container">
-      <section class="container">
+      <section class="container mb-4">
         <div class="row pb-4 mx-0 pt-5 text-center">
           <div class="col-12 col-md-6 col-lg-4 pb-3 px-5 footer_description">
-            <h3>Catering Service</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime minima perspiciatis ullam blanditiis quaerat quos.</p>
+            <h3 class="d-flex justify-content-center">Siguenos en las apps</h3>
+            <ul class="text-center">
+              <li><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/estaciongourmetcs" target="blank">   Estación Gourmet</a></i></li>
+              <li><i class="fab fa-instagram"></i><a href="https://www.instagram.com/estaciongourmet.cs/" target="blank">   estaciongourmet.cs</a></li>
+            </ul>
           </div>
           <div class="col-12 col-md-6 col-lg-4 px-5 footer_description">
             <h3>Horario</h3>
-            <p class="mb-0">Lunes - Viernes: 8:00 am - 5:00 pm</p>
-            <p>Sábado: 8:00 am - 5:00 pm</p>
+            <ul class="text-center">
+              <li>Lunes - Viernes: 8:00 am - 5:00 pm</li>
+              <li>Sábado: 8:00 am - 5:00 pm</li>
+            </ul>
           </div>
           <div class="col-12 col-md-6 col-lg-4 px-5 mt-4 footer_description">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime minima perspiciatis ullam blanditiis quaerat quos.</p>
-          </div>
-          <div class="col-12 col-md-6 col-lg-12 footer_description mt-3">
-            <h3 class="d-flex justify-content-center">Siguenos en las apps</h3>
+            <h3 class="d-flex justify-content-center">Contacto</h3>
             <ul class="text-center">
-              <li><i class="fab fa-facebook-square"></i>    Estación Gourmet</li>
-              <li><i class="fab fa-instagram"></i>    estaciongourmet.cs</li>
               <li><i class="fab fa-whatsapp"></i>    8488-1111</li>
+              <li><a href="mailto:andrea.duran@estaciongourmet.net"><i class="fas fa-envelope"></i>    andrea.duran@estaciongourmet.net</a></li>
             </ul>
+          </div>
         </div>
       </section>
       <div class="row text-center mx-0 profile">
@@ -415,5 +397,8 @@ if( isset($_POST["name"]) && isset($_POST["phone"]) && isset($_POST["email"]) )
 
     <!-- JS Custom -->
     <!-- <script src="./index.js"></script> -->
+
+    <!-- Facebook Pixel Code -->
+   
   </body>
 </html>
