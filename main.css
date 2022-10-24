@@ -26,9 +26,6 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   background: var(--white-color);
-  height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
 }
 
 html h1 {
@@ -74,17 +71,12 @@ nav ul .menu__services--items {
 
 /* /HEADER */
 /* MAIN */
-main {
-  height: 100%;
-  width: 100vw;
-}
-
 .chat {
+  position: fixed;
   height: 60px;
   width: 60px;
-  bottom: 40px;
-  right: 30px;
-  position: fixed;
+  bottom: 30px;
+  right: 20px;
   z-index: 10;
 }
 
@@ -93,12 +85,11 @@ main {
 }
 
 /* Home */
-#carousel {
+.carousel {
   position: relative;
-  width: 100vw;
 }
 
-#carousel .overlay {
+.carousel .overlay {
   position: absolute;
   height: 100%;
   top: 0;
@@ -110,7 +101,7 @@ main {
   z-index: 1;
 }
 
-#carousel .overlay .title {
+.carousel .overlay .title {
   position: absolute;
   top: 40%;
 }
@@ -193,6 +184,26 @@ main {
   color: var(--white-color);
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-control.has-error {
+  border: 2px solid rgb(215, 225, 109);
+}
+
+.form-control.no-error {
+  border: 2px solid green;
+}
+
+.invalid-feedback {
+  /* display: block; */
+  color: white;
+  background-color: rgba(240, 255, 255, 0.092);
+}
+
 /* gallery */
 .gallery {
   height: 100%;
@@ -257,8 +268,94 @@ footer .profile h6 span a {
 }
 
 /* /FOOTER */
+@media screen and (min-width: 1024px) {
+  /* MAIN */
+  
+    html h2 {
+      font-size: 5rem;
+      font-family: var(--subtitle);
+      font-weight: 400;
+    }
+  
+    html p {
+      font-size: 1.7rem;
+    }
+  
+    html label .from_label {
+      font-size: 1.7rem;
+    }
+  
+    /* Header */
+  
+    nav img {
+      width: 11rem;
+    }
+  
+    nav ul li {
+      font-size: 1.4rem;
+    }
+  
+    nav ul .menu__services--items {
+      background-color: var(--white-color);
+      border: none;
+      width: 22rem;
+    }
+  
+    nav ul .menu__services--items li {
+      height: 3.5rem;
+      padding-bottom: 0.3rem;
+      padding-left: 0.5rem;
+    }
+  
+    /* Home */
+    .overlay h1 {
+      font-size: 5.5rem;
+      text-transform: uppercase;
+    }
+  
+    .about_us img {
+      width: 55%;
+      border-radius: 25px;
+      /* box-shadow: var(--shadow); */
+    }
+  
+    /* Our services */
+    .our_services img {
+      width: 100%;
+    }
+  
+    .our_services .card h5 {
+      font-size: 2rem;
+    }
+  
+    .our_services .card p {
+      font-size: 1.6rem;
+    }
+  
+    /* Gallery */
+    .gallery .card {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  
+    /* FOOTER */
+    footer .container h3 {
+      font-size: 1.4rem;
+    }
+  
+    footer .container p {
+      font-size: 1.2rem;
+    }
+  
+    footer .container li {
+      padding-top: 0.5rem;
+      display: block;
+    }
+}
 
-@media (min-width: 850px) {
+/* @media (min-width: 850px) {
   .overlay h1 {
     font-size: 8rem;
     text-transform: uppercase;
@@ -269,5 +366,5 @@ footer .profile h6 span a {
   .overlay h1 {
     font-size: 5rem;
     text-transform: uppercase;
-  }
+  } */
 }
